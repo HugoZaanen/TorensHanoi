@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace TorensHanoi
 {
-    class Program
+    class Disk
     {
-        static void Main(string[] args)
+        public int Size { get; set; }
+
+        public Disk(int size)
         {
-            DiskCollection game = new DiskCollection(10);
-            game.printSize();
-            Console.Read();
+            Size = size;
         }
     }
 }
