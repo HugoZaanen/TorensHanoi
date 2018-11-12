@@ -10,9 +10,18 @@ namespace TorensHanoi
     {
         static void Main(string[] args)
         {
-            DiskCollection game = new DiskCollection(10);
-            game.printSize();
-            Console.Read();
+            int size = Int32.Parse(Console.ReadLine());
+
+            DiskCollection game = new DiskCollection(size);
+            Disk[] toren2 = new Disk[size];
+            Disk[] toren3 = new Disk[size];
+
+            bool play = true;
+
+            while(play)
+            {
+
+            }
         }
     }
 }

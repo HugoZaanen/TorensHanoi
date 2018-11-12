@@ -23,6 +23,7 @@ namespace TorensHanoi
             {
                 disks[i] = initializeDisk(i);
             }
+
             return disks;
         }
 
