@@ -33,6 +33,7 @@ namespace TorensHanoi
 
                 Console.WriteLine("kies een andere stapel om te vullen");
                 int swap2 = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("\n");
 
                 if (swap1 == 1 && swap2 == 2)
                 {
@@ -40,14 +41,50 @@ namespace TorensHanoi
                 }
                 else if(swap1 == 2 && swap2 == 1)
                 {
-                    swapStack(diskStack, diskStack2);
+                    swapStack(diskStack, diskStack1);
                 }
-                else
+                else if(swap1 == 1 && swap2 == 3)
                 {
-                    Console.WriteLine("11111");
+                    swapStack(diskStack2,diskStack);
+                }
+                else if(swap1 == 3 && swap2 == 1)
+                {
+                    swapStack(diskStack,diskStack2);
+                }
+                else if(swap1 == 2 && swap2 == 3)
+                {
+                    swapStack(diskStack2,diskStack1);
+                }
+                else if (swap1 == 3 && swap2 == 2)
+                {
+                    swapStack(diskStack1, diskStack2);
                 }
 
-               
+                try
+                {
+                    Console.WriteLine(diskStack.Peek());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Nothing in stack");
+                }
+                try
+                {
+                    Console.WriteLine(diskStack1.Peek());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("nothing in stack");
+                }
+                try
+                {
+                    Console.WriteLine(diskStack2.Peek());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("nothing in stack");
+                }
+
                 if (i == -1)
                 {
                     play = false;
